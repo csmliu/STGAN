@@ -1,0 +1,10 @@
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+
+# checkpoint files
+output/
+
+*.pyc
+*.sh
