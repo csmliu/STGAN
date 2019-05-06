@@ -1,0 +1,3 @@
+[{"name": "img", "dtype_or_format": "jpg", "shape": [64, 64, 3]},
+ {"name": "attr", "dtype_or_format": "int64", "shape": [40]},
+ {"data_num": 19962, "compression_type": 0}]
