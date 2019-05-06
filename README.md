@@ -73,6 +73,10 @@ Exemplar commands are listed here for a quick start.
 
 The arguments in `[]` are optional with a default value.
 
+### View Images
+
+You can use `show_image.py` to show the generated images, the code has been tested on Windows 10 and Ubuntu 16.04 (python 3.6). If you want to change the width of the buttons in the bottom, you can change `width` parameter in the 160th line. the '+++' and '---' on the button indicate that the above image is modified to 'add' or 'remove' the attribute. Note that you should specify the path of the attribute file (`list_attr_celeba.txt`) of CelebA in the 82nd line.
+
 ### NOTE:
 
 - You should give the path of the data by adding `--dataroot DATAROOT`;
