@@ -351,11 +351,11 @@ try:
                 print('Model is saved at %s!' % save_path)
 
             # sample
-            if (it + 1) % (save_freq if save_freq else it_per_epoch) == 0:
+            if (it + 1) % (sample_freq if sample_freq else it_per_epoch) == 0:
                 x_sample_opt_list = [xa_sample_ipt, np.full((n_sample, img_size, img_size // 10, 3), -1.0)]
+                raw_b_sample_ipt = (b_sample_ipt_list[0].copy() * 2 - 1) * thres_int
                 for i, b_sample_ipt in enumerate(b_sample_ipt_list):
-                    raw_b_sample_ipt = (b_sample_ipt * 2 - 1) * thres_int
-                    _b_sample_ipt = raw_b_sample_ipt.copy()
+                    _b_sample_ipt = (b_sample_ipt * 2 - 1) * thres_int
                     if i > 0:   # i == 0 is for reconstruction
                         _b_sample_ipt[..., i - 1] = _b_sample_ipt[..., i - 1] * test_int / thres_int
                     x_sample_opt_list.append(sess.run(x_sample, feed_dict={xa_sample: xa_sample_ipt,
