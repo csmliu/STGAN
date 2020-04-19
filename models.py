@@ -145,7 +145,7 @@ def gradient_penalty(f, real, fake=None):
         with tf.name_scope('interpolate'):
             if b is None:   # interpolation in DRAGAN
                 beta = tf.random_uniform(shape=tf.shape(a), minval=0., maxval=1.)
-                _, variance = tf.nn.moments(a, range(a.shape.ndims))
+                _, variance = tf.nn.moments(a, list(range(a.shape.ndims)))
                 b = a + 0.5 * tf.sqrt(variance) * beta
             shape = [tf.shape(a)[0]] + [1] * (a.shape.ndims - 1)
             alpha = tf.random_uniform(shape=shape, minval=0., maxval=1.)
