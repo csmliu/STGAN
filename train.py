@@ -67,7 +67,7 @@ parser.add_argument('--stu_norm', type=str, default='none', choices=['none', 'bn
 parser.add_argument('--stu_state', type=str, default='stu', choices=['stu', 'gru', 'direct'],
                     help='gru: gru arch.; stu: stu arch.; direct: directly pass the inner state to the outer layer')
 parser.add_argument('--multi_inputs', type=int, default=1,
-                    help='# of hierachical inputs (in the first several encoder layers')
+                    help='# of hierarchical inputs (in the first several encoder layers')
 parser.add_argument('--rec_loss_weight', type=float, default=100.0)
 parser.add_argument('--one_more_conv', type=int, default=0, choices=[0, 1, 3],
                     help='0: no further conv after the decoder; 1: conv(k=1); 3: conv(k=3)')
